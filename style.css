@@ -21,3 +21,28 @@ body{
     padding-bottom: 15px;
     margin:0 20px;
 }
+.textfield,textarea{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    border:1px solid blue;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    margin:7px 0;
+}
+textarea{
+    height: 80px;
+}
+.btn{
+    width : 19%;
+    height:50px;
+    background-color: grey; 
+    border-radius:5px ;
+    font-size: 20px;
+    color:white;
+    cursor: grabbing;
+    border-color: black;
+    border-style: solid;
+    margin:7px 2px;
+}
