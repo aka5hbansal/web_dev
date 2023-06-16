@@ -36,3 +36,7 @@
     </div>
 </body>
 </html>
+
+<?php
+include("connection.php");
+?>
