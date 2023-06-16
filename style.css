@@ -41,8 +41,7 @@ textarea{
     border-radius:5px ;
     font-size: 20px;
     color:white;
-    cursor: grabbing;
-    border-color: black;
-    border-style: solid;
+    cursor: pointer;
+    border: 0;
     margin:7px 2px;
 }
