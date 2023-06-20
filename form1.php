@@ -76,10 +76,10 @@ if(isset($_POST['save']))
 
     $data=mysqli_query($conn,$query);
     if($data){
-        echo "Data saved into Database";
+        echo "<script> alert('Data saved into Database') </script>";
     }
     else{
-        echo "Failed to save data";
+        echo "<script> alert('Failed to save data') </script>";
     }
 }
 ?>
@@ -90,10 +90,10 @@ if(isset($_POST['delete']))
     $query="DELETE FROM FORM WHERE id='$id'";
     $data=mysqli_query($conn,$query);
     if($data){
-        echo "Record deleted";
+        echo "<script> alert('Record deleted') </script>";
     }
     else{
-        echo "failed to delete";
+        echo "<script> alert('failed to delete') </script>";
     }
 }
 ?>
