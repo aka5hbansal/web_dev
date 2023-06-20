@@ -49,13 +49,19 @@ if(isset($_POST['search']))
             <input type="submit" value="search" name="searchdata" class="btn">
             <input type="submit" value="save" name="save" class="btn" style="background-color:green;">
             <input type="submit" value="modify" name="" class="btn" style="background-color:orange;">
-            <input type="submit" value="Delete" name="delete" class="btn" style="background-color:red;">
+            <input type="submit" value="Delete" name="delete" class="btn" style="background-color:red;" onclick="return checkdelete()">
             <input type="submit" value="clear" name="" class="btn" style="background-color:blue;">
     </div>
 </form>
 </div>
 </body>
 </html>
+
+<script>
+    function checkdelete(){
+        return confirm('are you sure you want to delete this record');
+    }
+</script>
 
 <?php
 if(isset($_POST['save']))
