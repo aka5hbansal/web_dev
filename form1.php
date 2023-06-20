@@ -48,7 +48,7 @@ if(isset($_POST['search']))
             <textarea placeholder="address" name="address"><?php if(isset($_POST['searchdata'])){echo $result['emp_address'];}?></textarea>
             <input type="submit" value="search" name="searchdata" class="btn">
             <input type="submit" value="save" name="save" class="btn" style="background-color:green;">
-            <input type="submit" value="modify" name="" class="btn" style="background-color:orange;">
+            <input type="submit" value="modify" name="modify" class="btn" style="background-color:orange;">
             <input type="submit" value="Delete" name="delete" class="btn" style="background-color:red;" onclick="return checkdelete()">
             <input type="submit" value="clear" name="" class="btn" style="background-color:blue;">
     </div>
@@ -94,6 +94,27 @@ if(isset($_POST['delete']))
     }
     else{
         echo "<script> alert('failed to delete') </script>";
+    }
+}
+?>
+<?php
+if(isset($_POST['modify']))
+{
+    $id        =$_POST['search'];
+    $name      =$_POST['name'];
+    $gender    =$_POST['gender'];
+    $email     =$_POST['email'];
+    $department=$_POST['department'];
+    $address   =$_POST['address'];
+    
+    $query  = "UPDATE form SET emp_name='$name',emp_gender='$gender',emp_email='$email',emp_dept='$department',emp_address='$address' WHERE id=='$id'";
+
+    $data=mysqli_query($conn,$query);
+    if($data){
+        echo "<script> alert('Record modified') </script>";
+    }
+    else{
+        echo "<script> alert('Failed to modify') </script>";
     }
 }
 ?>
